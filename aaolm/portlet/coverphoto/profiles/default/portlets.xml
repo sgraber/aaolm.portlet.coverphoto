@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="aaolm.portlet.coverphoto.CoverPhotoPortlet"
+   title="Cover Photo Portlet"
+   description="A portlet that displays the cover photo from the current issue."
+   />
+
+</portlets>

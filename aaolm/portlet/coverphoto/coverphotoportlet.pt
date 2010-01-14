@@ -1,0 +1,31 @@
+<dl id="portlet-cover"
+	class="portlet portletCoverPhotoPortlet"
+    i18n:domain="aaolm.portlet.coverphoto"
+    tal:condition="view/show">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        	<tal:title tal:content="view/Title" />
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+    	<a href="#"
+    	   class="popup"
+    	   tal:attributes="href string:${view/latest_cover_image}/image_view_fullscreen">
+	        <img src="#"
+	             alt="#"
+	             title="#"
+	             tal:attributes="src string:${view/latest_cover_image}/image_mini;
+	                             alt view/Title;
+	                             title view/Title;" />
+        </a>
+    </dd>
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>
+

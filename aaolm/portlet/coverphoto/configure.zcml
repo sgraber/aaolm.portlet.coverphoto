@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="aaolm.portlet.coverphoto">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <genericsetup:registerProfile
+       name="default"
+       title="Cover Photo Portlet"
+       directory="profiles/default"
+       description="A portlet that displays the cover photo from the current issue."
+       provides="Products.GenericSetup.interfaces.EXTENSION"
+       />
+
+     <!-- Register the portlet -->
+
+     <!-- If the portlet has no configurable parameters, you can remove
+          the EditForm declaration in coverphotoportlet.py and delete
+          the 'editview' attribute from this statement.
+       -->
+
+     <plone:portlet
+         name="aaolm.portlet.coverphoto.CoverPhotoPortlet"
+         interface=".coverphotoportlet.ICoverPhotoPortlet"
+         assignment=".coverphotoportlet.Assignment"
+         view_permission="zope2.View"
+         edit_permission="cmf.ManagePortal"
+         renderer=".coverphotoportlet.Renderer"
+         addview=".coverphotoportlet.AddForm"
+         />
+
+</configure>
