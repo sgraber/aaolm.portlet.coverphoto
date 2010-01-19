@@ -81,7 +81,7 @@ class Renderer(base.Renderer):
         """
         context = aq_inner(self.context)
         portal_url = getToolByName(context, "portal_url").getPortalObject().absolute_url()
-        print '\n\n\n <---------- HERE I AM THIS IS ME! ---------->\n' + portal_url + ' ' + context.absolute_url() + '\n'
+        
         if context.portal_type == 'Topic' and (
                     'cover.jpg' in context.aq_inner.getParentNode().contentIds() 
                     or 
