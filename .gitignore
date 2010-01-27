@@ -18,3 +18,4 @@
 .*.swp
 .DS_Store
 *.egg-info
+setup.cfg
