@@ -7,6 +7,8 @@ setup(name='aaolm.portlet.coverphoto',
       version=version,
       description="A portlet that displays the cover photo from the current issue.",
       long_description=open("README.txt").read() + "\n" +
+                       open(os.path.join("docs", "INSTALL.txt")).read()  + "\n" +
+                       open(os.path.join("docs", "LICENSE.txt")).read()  + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -30,5 +32,8 @@ setup(name='aaolm.portlet.coverphoto',
       ],
       entry_points="""
       # -*- Entry points: -*-
+
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )
